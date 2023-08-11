@@ -61,3 +61,9 @@ button {
 #text-2 {
     margin-top: 15px;
 }
+
+.popupCover{
+    height: auto;
+    width: auto;
+
+}
