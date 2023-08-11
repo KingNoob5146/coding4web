@@ -1,0 +1,63 @@
+/* Your CSS goes here --------------------- */
+
+/* Add spacing between interface elements */
+#input {
+    padding: 20px;
+    margin: 20;
+    margin-bottom: 50px;
+}
+
+/* Apply regular font to interface elements */
+#input, #output {
+    margin-bottom: auto;
+}
+
+/* Increase font size for readability */
+#input label, #output label, button {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Unbounded, Light 300";
+    color:rgba(0, 58, 112, 0.748);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 0px;
+}
+
+#input {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+select,
+input[type="text"],
+input[type="number"],
+input[type="range"],
+fieldset {
+    margin-bottom: 15px;
+}
+
+button {
+    margin-top: 15px;
+}
+
+
+
+#output-canvas img {
+    max-width: 100%;
+    height: auto;
+}
+
+#text-1,
+#text-2 {
+    margin-top: 15px;
+}

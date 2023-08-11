@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unbounded|Handjet">
+    <title>Coding for Web - Soumil Kumar</title>
+    <script>
+        // Function to animate text appearing letter by letter
+        function animateText(element, text) {
+            let index = 0;
+            function addNextLetter() {
+                if (index < text.length) {
+                    element.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(addNextLetter, 100); // Adjust the timing as needed
+                }
+            }
+            addNextLetter();
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <div class="typed-animation" id="typed-animation">
+            <script>
+                // Call the animateText function to animate the text
+                animateText(document.getElementById("typed-animation"), "CODING 4 WEB - Soumil Kumar");
+            </script>
+        </div>
+        <div class="button-container">
+            <div class="tooltip-container">
+                <a href="D4.A1_gm_message_maker/index.html" class="button">A1</a>
+                <div class="tooltip">Meme Maker (11th Aug)</div>
+            </div>
+            <div class="tooltip-container">
+                <a href="a2.html" class="button">A2</a>
+                <div class="tooltip">Undefined</div>
+            </div>
+            <div class="tooltip-container">
+                <a href="a3.html" class="button">A3</a>
+                <div class="tooltip">Undefined</div>
+            </div>
+        </div>
+        <div class="tasks-container">
+            <h2>Daily Tasks</h2>
+            <a href="7_aug/7_aug_soumil.html" class="task-button">7th Aug 23</a>
+            <a href="#" class="task-button">8th Aug 23</a>
+            <a href="10_aug/10_aug_soumil.html" class="task-button">10th Aug 23</a>
+            <a href="#" class="task-button">11th Aug 23</a>
+        </div>
+    </main>
+    <!-- Add the moving text carousel -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <span id="last-updated"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            My Instagram @soumilkumar_
+        </div>
+    </div>
+    <script>
+        // Get the last modified timestamp of the HTML file
+        var lastModified = document.lastModified;
+
+        // Convert the timestamp to a human-readable format
+        var options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+        var formattedDate = new Date(lastModified).toLocaleDateString(undefined, options);
+
+        // Update the content of the span element with the formatted date
+        document.getElementById("last-updated").textContent = "Last Updated: " + formattedDate;
+    </script>
+</body>
+</html>

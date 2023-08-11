@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Author Name">
+    <meta name="description" content="This is a Good Morning Message Maker">
+    <meta property="og:title" content="Good Morning Message Maker"/>
+    <meta property="og:description" content="This is a Good Morning Message Maker">
+    <title>Good Morning Message Maker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <link href="./template-files/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./template-files/script.js" defer></script>
+    <script type="text/javascript" src="./template-files/html2canvas.js" defer></script>
+    <link href="./style-to-edit.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./script-to-edit.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.2/gif.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <button id="openPopup" onclick="showPopup()">?</button>
+        <h1>Meme Maker – Soumil Kumar & Sameeksha Kodappully</h1>
+    </header>
+    <main>
+        <section id="input">
+            <div class = "dropdown">
+                <select onchange = "selectImage()"  id = "dropdown">
+                    <option value = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG9paWN6c2k4dnlwdmtndHg1c3ExMW4zNTIyYnNwc25kbHpydWM4NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XWaTRqKYEy4nBcs5P6/giphy.gif"> Choose an Image</option>
+                    <option value = "https://media.tenor.com/QaGZ50VlEPEAAAAM/think-about-it-use-your-brain.gif">Meme 1</option>
+                    <option value = "https://media.tenor.com/0pmpMlo8eL8AAAAM/what-huh.gif">Meme 2</option>
+                    <option value = "https://media.tenor.com/_KThQOroE60AAAAM/the-simpsons-homer.gif">Meme 3</option>
+                    <option value = "https://www.asiamediajournal.com/wp-content/uploads/2022/11/Meme-GIF-PFP.gif">Meme 4</option>
+                    <option value = "https://cdn.vox-cdn.com/thumbor/a5EcHSnHLRfQyzSFvhmPSnibCq0=/0x0:420x314/1400x1400/filters:focal(136x115:202x181):format(gif)/cdn.vox-cdn.com/uploads/chorus_image/image/55279403/tenor.0.gif">Meme 5</option>
+                    <option value = "https://media.tenor.com/aSW9ZfIIC64AAAAM/shaq-shimmy.gif">Meme 6</option>
+    
+                </select>
+            </div>
+
+            <label for="primary-title">Primary Title:</label>
+            <input oninput ="text" id="primary-title" name="primary-title">
+
+            <label for="secondary-title">Secondary Title:</label>
+            <input type="text" id="secondary-title" name="secondary-title">
+
+            <fieldset>
+                <legend>Choose Font Family:</legend>
+                <input type="radio" id="font-cursive" name="font-family" value="cursive">
+                <label for="font-cursive">Cursive</label>
+                <input type="radio" id="font-serif" name="font-family" value="serif">
+                <label for="font-serif">Serif</label>
+                <input type="radio" id="font-sans-serif" name="font-family" value="sans-serif">
+                <label for="font-sans-serif">Sans-serif</label>
+            </fieldset>
+
+            <label for="font-color">Choose Font Colour:</label>
+            <select id="font-color" name="font-color">
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="pink">Pink</option>
+                <option value="purple">Purple</option>
+                <option value="bisque">Bisque</option>
+                <option value="beige">Beige</option>
+                <option value="alice_blue">Alice Blue</option>
+                <option value="brown">Brown</option>
+            </select>
+
+            <label for="font-size">Adjust Font Size:</label>
+            <input type="range" id="font-size" name="font-size" min="12frad" max="72">
+
+            <label for="text-stroke">Text Stroke (pixels):</label>
+            <input type="number" id="stroker" name="text-stroke" min="0" max="10" onchange="adjuststroke()">
+
+            <!-- ... Previous HTML code ... -->
+            <label for="text-stroke-color">Choose Stroke Colour:</label>
+            <select id="text-stroke-color" name="text-stroke-color" onchange="updateStrokeColor()">
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+</select>
+<!-- ... Rest of the HTML ... -->
+
+        </section>
+
+        <button id="save-img">Save Image</button>
+
+        <section id="output">
+            <div id="output-canvas">
+                <img src = "" id = "imagebox">
+                <h1 id="text-1"></h1>
+                <h2 id="text-2"></h2>
+            </div>
+    </main>
+    
+    <div id="popupCover" onclick="hidePopup()"></div>
+    <div id="popup">
+        <!-- Popup content as per your instructions -->
+    </div>
+</body>
+</html>

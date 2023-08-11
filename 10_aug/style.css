@@ -1,0 +1,25 @@
+#square {
+  margin-left: 500px;
+  margin-bottom: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(94, 158, 27);
+  transition: all 0.3s ease;
+  border-radius: 10%;
+  align-items: center;
+}
+
+button {
+  margin-left: 220px;
+  padding: 10px 15px;
+  background-color: #161616;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 3%;
+}
+
+button:hover {
+  background-color: #115500;
+}
