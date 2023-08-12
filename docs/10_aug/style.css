@@ -1,25 +1,41 @@
-#square {
-  margin-left: 500px;
-  margin-bottom: 50px;
-  width: 100px;
-  height: 100px;
-  background-color: rgb(94, 158, 27);
-  transition: all 0.3s ease;
-  border-radius: 10%;
+/* Add your CSS styles here */
+#container {
+  width: 400px;
+  height: 400px;
+  background-color: lightgray;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-button {
-  margin-left: 220px;
-  padding: 10px 15px;
-  background-color: #161616;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border-radius: 3%;
+#image {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-button:hover {
-  background-color: #115500;
+.hidden {
+  display: none;
+}
+
+body{
+  margin-left:100px;
+  font-family:'Unbounded', cursive ;
+  font-weight: 400;
+  background-color: rgba(225, 158, 34, 0.527);
+}
+
+#input_heading{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#font_{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#image_select{
+  margin-top: 20px;
+  margin-bottom: 10px;
 }

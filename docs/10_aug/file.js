@@ -1,26 +1,34 @@
-const square = document.getElementById('square');
-const increaseButton = document.getElementById('increase');
-const decreaseButton = document.getElementById('decrease');
-const changeColorButton = document.getElementById('changeColor');
+// JavaScript to toggle attributes/values of elements based on inputs
+document.addEventListener("DOMContentLoaded", () => {
+  const heading = document.getElementById("heading");
+  const subheading = document.getElementById("subheading");
+  const paragraph = document.getElementById("paragraph");
+  const container = document.getElementById("container");
+  const image = document.getElementById("image");
+  const headingInput = document.getElementById("headingInput");
+  const subheadingButton = document.getElementById("subheadingButton");
+  const fontSelect = document.getElementById("fontSelect");
+  const sizeRange = document.getElementById("sizeRange");
+  const imageSelect = document.getElementById("imageSelect");
 
-increaseButton.addEventListener('click', () => {
-  const currentSize = parseInt(getComputedStyle(square).width);
-  square.style.width = currentSize + 50 + 'px';
-  square.style.height = currentSize + 50 + 'px';
-});
+  headingInput.addEventListener("input", () => {
+      heading.textContent = headingInput.value;
+  });
 
-decreaseButton.addEventListener('click', () => {
-  const currentSize = parseInt(getComputedStyle(square).width);
-  if (currentSize > 20) {
-    square.style.width = currentSize - 50 + 'px';
-    square.style.height = currentSize - 50 + 'px';
-  }
-});
+  subheadingButton.addEventListener("click", () => {
+      subheading.classList.toggle("hidden");
+  });
 
-changeColorButton.addEventListener('click', () => {
-  if (square.style.backgroundColor === 'red') {
-    square.style.backgroundColor = 'green';
-  } else {
-    square.style.backgroundColor = 'red';
-  }
+  fontSelect.addEventListener("change", () => {
+      paragraph.style.fontFamily = fontSelect.value;
+  });
+
+  sizeRange.addEventListener("input", () => {
+      container.style.width = sizeRange.value + "px";
+      container.style.height = sizeRange.value + "px";
+  });
+
+  imageSelect.addEventListener("change", () => {
+      image.src = imageSelect.value;
+  });
 });

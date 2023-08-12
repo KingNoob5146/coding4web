@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<title>Resizable and Color-Changing Square</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unbounded|Handjet">
+    <script src="file.js" defer></script>
+    <title>Basic Webpage</title>
 </head>
 <body>
-  <div id="square"></div>
-  <div id="buttons">
-    <button id="increase" class="button">Increase Size</button>
-  <button id="decrease" class="button">Decrease Size</button>
-  <button id="changeColor" class="button">Change Color</button>
-  </div>
-  <script src="file.js"></script>
+    <h1 id="heading">Default Heading</h1>
+    <h2 id="subheading">10th Aug 2023, Soumil Kumar</h2>
+    <p id="paragraph">This is a sample paragraph with different font families.</p>
+    <div id="container">
+        <img id="image" src="soumil_webpage_image.png" alt="Image">
+    </div>
+    <div id="input_heading">
+        <label for="headingInput">Enter Heading Text:</label>
+        <input type="text" id="headingInput">
+    </div>
+    <div>
+        <button id="subheadingButton">Toggle Subheading</button>
+    </div>
+    <div id="font_">
+        <label for="fontSelect">Choose Paragraph Font:</label>
+        <select id="fontSelect">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+    </div>
+    <div>
+        <label for="sizeRange">Adjust Container Size:</label>
+        <input type="range" id="sizeRange" min="200" max="600" step="10" value="400">
+    </div>
+    <div id="image_select">
+        <label for="imageSelect">Choose Image:</label>
+        <select id="imageSelect">
+          <option value="">Choose an Image</option>
+            <option value="https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">Image 1</option>
+            <option value="https://images.unsplash.com/photo-1691379635079-9f438036ea58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80">Image 2</option>
+            <option value="https://images.unsplash.com/photo-1682687981922-7b55dbb30892?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80">Image 3</option>
+        </select>
+    </div>
 </body>
 </html>
+
