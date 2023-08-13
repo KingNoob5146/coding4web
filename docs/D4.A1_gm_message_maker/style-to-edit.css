@@ -61,6 +61,8 @@ button {
 #text-2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-top: 15px;
+    font-size: 50px;
+    color: white;
 }
 
 .popupCover{
