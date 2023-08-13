@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unbounded|Handjet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unbounded|Handjet|Cutive|VT323">
+    <script src="file.js" defer></script>
     <title>Coding for Web - Soumil Kumar</title>
     <script>
+        // Function to fetch and display visitor's geolocation and IP address
+    function fetchVisitorInfo() {
+        // Fetch visitor's IP address
+        fetch('https://api64.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                const ipAddress = data.ip;
+
+                // Fetch visitor's geolocation based on IP address
+                fetch(`https://ipapi.co/${ipAddress}/json/`)
+                    .then(response => response.json())
+                    .then(geoData => {
+                        const geolocation = `${geoData.city}, ${geoData.region}, ${geoData.country_name}`;
+                        const infoElement = document.getElementById("visitor-info");
+                        infoElement.textContent = `Your Location: ${geolocation} | IP Address: ${ipAddress}`;
+                    })
+                    .catch(error => {
+                        console.error("Error fetching geolocation data:", error);
+                    });
+            })
+            .catch(error => {
+                console.error("Error fetching IP address:", error);
+            });
+    }
+
+    // Call the fetchVisitorInfo function to fetch and display visitor info
+    fetchVisitorInfo();
+
+
         // Function to animate text appearing letter by letter
         function animateText(element, text) {
             let index = 0;
@@ -46,7 +76,7 @@
         <div class="tasks-container">
             <h2>Daily Tasks</h2>
             <a href="docs/7_aug/7_aug_soumil.html" class="task-button">7th Aug 23</a>
-            <a href="#" class="task-button">8th Aug 23</a>
+            <a href="docs/8_aug/8_aug_soumil.html" class="task-button">8th Aug 23</a>
             <a href="docs/10_aug/10_aug_soumil.html" class="task-button">10th Aug 23</a>
             <a href="#" class="task-button">11th Aug 23</a>
         </div>
@@ -58,6 +88,8 @@
             My email- soumil.work@gmail.com
         </div>
     </div>
+    <div id="visitor-info" class="visitor-info"></div>
+
     <script>
         // Get the last modified timestamp of the HTML file
         var lastModified = document.lastModified;

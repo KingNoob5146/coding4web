@@ -152,3 +152,17 @@ main {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
 }
+
+/* Style for the visitor info */
+.visitor-info {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    background-color: #2B2D42;
+    color: #F8F32B;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'VT323',cursive;
+
+}
