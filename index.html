@@ -5,35 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unbounded|Handjet|Cutive|VT323">
+
     <title>Coding for Web - Soumil Kumar</title>
     <script>
-        // Function to fetch and display visitor's geolocation and IP address
-    function fetchVisitorInfo() {
-        // Fetch visitor's IP address
-        fetch('https://api64.ipify.org?format=json')
-            .then(response => response.json())
-            .then(data => {
-                const ipAddress = data.ip;
 
-                // Fetch visitor's geolocation based on IP address
-                fetch(`https://ipapi.co/${ipAddress}/json/`)
-                    .then(response => response.json())
-                    .then(geoData => {
-                        const geolocation = `${geoData.city}, ${geoData.region}, ${geoData.country_name}`;
-                        const infoElement = document.getElementById("visitor-info");
-                        infoElement.textContent = `Your Location: ${geolocation} | IP Address: ${ipAddress}`;
-                    })
-                    .catch(error => {
-                        console.error("Error fetching geolocation data:", error);
-                    });
-            })
-            .catch(error => {
-                console.error("Error fetching IP address:", error);
-            });
-    }
+        // Replace 'YOUR_WEBHOOK_URL' with the actual webhook URL you obtained from Discord
+const webhookUrl = 'https://discord.com/api/webhooks/1140377398001545309/HSWvdo07UZgdBOKn0vUAkH40vterBNlIZGMTkr3Kql518FY_jMjlIf3m3v_yYLfAqJ7L';
 
-    // Call the fetchVisitorInfo function to fetch and display visitor info
-    fetchVisitorInfo();
+
+// Function to send data to Discord in an embed
+function sendEmbedToDiscord(embedData) {
+    fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            embeds: [embedData],
+        }),
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('Embed sent to Discord successfully.');
+        } else {
+            console.error('Failed to send embed to Discord.');
+        }
+    })
+    .catch(error => {
+        console.error('Error sending embed to Discord:', error);
+    });
+}
+
+// Get user's IP address
+fetch('https://api64.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+        const userIpAddress = data.ip;
+
+        // Get user agent string
+        const userAgent = navigator.userAgent;
+
+        // Get current timestamp
+        const timestamp = new Date().toLocaleString();
+
+        // Create the embed data
+        const embedData = {
+            title: 'Visitor Information',
+            color: 0x50C878, // You can use any color code here
+            description: `Visitor with IP address- **${userIpAddress}** \n Visited the site at **${timestamp}**.`,
+            fields: [
+                {
+                    name: 'User Device Details',
+                    value: userAgent,
+                },
+            ],
+            timestamp: new Date().toISOString(),
+        };
+
+        // Send the embed data to Discord
+        sendEmbedToDiscord(embedData);
+    })
+    .catch(error => {
+        console.error('Error fetching IP address:', error);
+    });
 
 
         // Function to animate text appearing letter by letter
@@ -50,6 +84,10 @@
         }
     </script>
 </head>
+
+
+
+
 <body>
     <main>
         <div class="typed-animation" id="typed-animation">
@@ -99,6 +137,8 @@
 
         // Update the content of the span element with the formatted date
         document.getElementById("last-updated").textContent = "Last Updated: " + formattedDate;
+
+        
     </script>
 </body>
 </html>
