@@ -32,3 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
       image.src = imageSelect.value;
   });
 });
+
+//Back to homepage button
+document.addEventListener("DOMContentLoaded", function() {
+    const backButton = document.getElementById("back-button");
+  
+    backButton.addEventListener("click", function() {
+        // Use JavaScript to navigate back to the previous page
+        window.history.back();
+    });
+  });

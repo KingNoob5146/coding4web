@@ -1,0 +1,52 @@
+/* All <sections> to have 20px margin underneath */
+section {
+    margin-bottom: 20px;
+}
+
+/* The second <section> should have a 20px margin on top */
+section:nth-of-type(2) {
+    margin-top: 20px;
+}
+
+/* The <div> should have a 20px padding on top */
+div {
+    padding-top: 20px;
+    background-color: lightgray;
+}
+
+/* All sections and div to have a padding of 5px underneath */
+section, div {
+    padding-bottom: 5px;
+}
+
+/* All text in the document to be set at a font size of 16px */
+body {
+    font-size: 16px;
+}
+
+/* All paragraphs under the <div> element needs to be set at 20px */
+div p {
+    font-size: 20px;
+}
+
+/* In the second section, all paragraphs after the first one should have an indent of 40px */
+section:nth-of-type(2) p:not(:first-child) {
+    text-indent: 40px;
+}
+
+/* In the fourth section, the second list item in the 1st list should have an underline */
+section:nth-of-type(4) ul:first-child li:nth-child(2) {
+    text-decoration: underline;
+}
+
+/* On hovering over the above, make the underline into a strikethrough */
+section:nth-of-type(4) ul:first-child li:nth-child(2):hover {
+    text-decoration: line-through;
+}
+
+/* Hovering over the third section changes the background of the fourth section */
+section:nth-of-type(3):hover + section {
+    background-color: lightblue;
+}
+
+
