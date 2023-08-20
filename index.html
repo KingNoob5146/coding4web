@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,64 +11,64 @@
     <script>
 
         // Replace 'YOUR_WEBHOOK_URL' with the actual webhook URL you obtained from Discord
-const webhookUrl = 'https://discord.com/api/webhooks/1140377398001545309/HSWvdo07UZgdBOKn0vUAkH40vterBNlIZGMTkr3Kql518FY_jMjlIf3m3v_yYLfAqJ7L';
+        const webhookUrl = 'https://discord.com/api/webhooks/1140377398001545309/HSWvdo07UZgdBOKn0vUAkH40vterBNlIZGMTkr3Kql518FY_jMjlIf3m3v_yYLfAqJ7L';
 
 
-// Function to send data to Discord in an embed
-function sendEmbedToDiscord(embedData) {
-    fetch(webhookUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            embeds: [embedData],
-        }),
-    })
-    .then(response => {
-        if (response.ok) {
-            console.log('Embed sent to Discord successfully.');
-        } else {
-            console.error('Failed to send embed to Discord.');
-        }
-    })
-    .catch(error => {
-        console.error('Error sending embed to Discord:', error);
-    });
-}
-
-// Get user's IP address
-fetch('https://api64.ipify.org?format=json')
-    .then(response => response.json())
-    .then(data => {
-        const userIpAddress = data.ip;
-
-        // Get user agent string
-        const userAgent = navigator.userAgent;
-
-        // Get current timestamp
-        const timestamp = new Date().toLocaleString();
-
-        // Create the embed data
-        const embedData = {
-            title: 'Visitor Information',
-            color: 0x50C878, // You can use any color code here
-            description: `Visitor with IP address- **${userIpAddress}** \n Visited the site at **${timestamp}**.`,
-            fields: [
-                {
-                    name: 'User Device Details',
-                    value: userAgent,
+        // Function to send data to Discord in an embed
+        function sendEmbedToDiscord(embedData) {
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
                 },
-            ],
-            timestamp: new Date().toISOString(),
-        };
+                body: JSON.stringify({
+                    embeds: [embedData],
+                }),
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Embed sent to Discord successfully.');
+                    } else {
+                        console.error('Failed to send embed to Discord.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error sending embed to Discord:', error);
+                });
+        }
 
-        // Send the embed data to Discord
-        sendEmbedToDiscord(embedData);
-    })
-    .catch(error => {
-        console.error('Error fetching IP address:', error);
-    });
+        // Get user's IP address
+        fetch('https://api64.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                const userIpAddress = data.ip;
+
+                // Get user agent string
+                const userAgent = navigator.userAgent;
+
+                // Get current timestamp
+                const timestamp = new Date().toLocaleString();
+
+                // Create the embed data
+                const embedData = {
+                    title: 'Visitor Information',
+                    color: 0x50C878, // You can use any color code here
+                    description: `Visitor with IP address- **${userIpAddress}** \n Visited the site at **${timestamp}**.`,
+                    fields: [
+                        {
+                            name: 'User Device Details',
+                            value: userAgent,
+                        },
+                    ],
+                    timestamp: new Date().toISOString(),
+                };
+
+                // Send the embed data to Discord
+                sendEmbedToDiscord(embedData);
+            })
+            .catch(error => {
+                console.error('Error fetching IP address:', error);
+            });
 
 
         // Function to animate text appearing letter by letter
@@ -121,7 +122,8 @@ fetch('https://api64.ipify.org?format=json')
             <a href="docs/14_aug/14_aug_soumil.html" class="task-button">14th Aug 23</a>
             <a href="#" class="task-button-15">15th Aug 23</a>
             <a href="docs/17_aug/17_aug_soumil.html" class="task-button">17th Aug 23</a>
-            <a href="#" class="task-button">18th Aug 23</a>
+            <a href="https://pulkishore.github.io/Coding_4_Web/Website%20Documentation/index.html"
+                class="task-button">18th Aug 23</a>
         </div>
     </main>
     <!-- Add the moving text carousel -->
@@ -144,7 +146,8 @@ fetch('https://api64.ipify.org?format=json')
         // Update the content of the span element with the formatted date
         document.getElementById("last-updated").textContent = "Last Updated: " + formattedDate;
 
-        
+
     </script>
 </body>
+
 </html>
