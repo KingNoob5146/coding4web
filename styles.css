@@ -1,5 +1,11 @@
 /* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
@@ -42,7 +48,7 @@ main {
 
 .button {
     font-size: 50px;
-    font-family: "Unbounded",cursive;
+    font-family: "Unbounded", cursive;
     font-weight: 600;
     display: inline-flex;
     padding: 1.5rem 2rem;
@@ -66,8 +72,8 @@ main {
 .tasks-container {
     text-align: center;
     margin-top: 3rem;
-    font-family:'Unbounded', cursive;
-    font-weight:450;
+    font-family: 'Unbounded', cursive;
+    font-weight: 450;
 }
 
 .tasks-container h2 {
@@ -82,8 +88,8 @@ main {
 .tasks-container2 {
     text-align: center;
     margin-top: 2rem;
-    font-family:'Unbounded', cursive;
-    font-weight:450;
+    font-family: 'Unbounded', cursive;
+    font-weight: 450;
 }
 
 .tasks-container2 h2 {
@@ -115,11 +121,11 @@ main {
 .typed-animation {
     font-size: 70px;
     font-family: 'Handjet';
-    color:#F8F32B;
+    color: #F8F32B;
 }
 
- /* Add this style for the tooltip container */
- .tooltip-container {
+/* Add this style for the tooltip container */
+.tooltip-container {
     position: relative;
     display: inline-block;
 }
@@ -128,7 +134,8 @@ main {
 .tooltip {
     display: none;
     position: absolute;
-    bottom: -30px; /* Adjust as needed for the spacing */
+    bottom: -30px;
+    /* Adjust as needed for the spacing */
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.7);
@@ -144,8 +151,8 @@ main {
     display: block;
 }
 
- /* Add this style for the moving text carousel */
- .carousel-container {
+/* Add this style for the moving text carousel */
+.carousel-container {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -154,20 +161,26 @@ main {
     color: #fff;
     font-size: 16px;
     overflow: hidden;
-    font-family: 'Unbounded',cursive;
-    font-weight:100
+    font-family: 'Unbounded', cursive;
+    font-weight: 100
 }
 
 .carousel {
     display: inline-block;
     white-space: nowrap;
-    animation: moveText 20s linear infinite; /* Adjust duration as needed */
+    animation: moveText 20s linear infinite;
+    /* Adjust duration as needed */
     animation-delay: 0.01s;
 }
 
 @keyframes moveText {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* Style for the visitor info */
@@ -180,7 +193,7 @@ main {
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 20px;
-    font-family: 'VT323',cursive;
+    font-family: 'VT323', cursive;
 
 }
 
@@ -189,11 +202,100 @@ main {
     display: inline-block;
     padding: 0.5rem 1rem;
     background-image: url('https://cdn.pixabay.com/photo/2012/04/10/23/03/india-26828_1280.png');
-    background-size:60%; 
-    background-position: center; 
+    background-size: 60%;
+    background-position: center;
     color: #00000082;
     text-decoration: none;
     margin: 0.5rem;
     border-radius: 5px;
     transition: background-color 0.3s;
+}
+
+/* Existing styles... */
+
+/* Add this style to make options appear side by side */
+.tooltip .tooltip-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tooltip-option {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1px 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    transition-duration: 0.3s;
+}
+
+.tooltip-option a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* For screens with width up to 1024px */
+@media (max-width: 1024px) {
+    /* Adjust styles for smaller screens here */
+    /* For example, you might decrease font sizes, adjust padding, or change layout */
+}
+
+/* For screens with width up to 600px */
+@media (max-width: 600px) {
+    /* Adjust styles for even smaller screens here */
+}
+
+
+
+/* For screens with width up to 1024px */
+@media (max-width: 1024px) {
+    .button {
+        font-size: 40px;
+        /* Adjust the font size as needed */
+        padding: 1rem 1.5rem;
+        /* Adjust the padding as needed */
+    }
+}
+
+/* For screens with width up to 600px */
+@media (max-width: 600px) {
+    .button {
+        font-size: 24px;
+        /* Adjust the font size as needed */
+        padding: 0.35rem 0.95rem;
+        /* Adjust the padding as needed */
+    }
+}
+
+
+
+/* For screens with width up to 1024px */
+@media (max-width: 1024px) {
+    .typed-animation {
+        font-size: 50px;
+        /* Adjust the font size as needed */
+    }
+}
+
+/* For screens with width up to 600px */
+@media (max-width: 600px) {
+    .typed-animation {
+        font-size: 30px;
+        /* Adjust the font size as needed */
+    }
+}
+
+@media (max-width: 1024px) {
+    .tasks-container>h2 {
+        font-size: 54px;
+        /* Adjust the font size as needed */
+    }
+}
+
+/* For screens with width up to 600px */
+@media (max-width: 600px) {
+    .tasks-container>h2 {
+        font-size: 30px;
+        /* Adjust the font size as needed */
+    }
 }

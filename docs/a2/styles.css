@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.image-grid {
+    display: flex;
+}
+
+.grid-item {
+    width: calc(33.33% - 10px);
+    margin-right: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.grid-item p {
+    margin: 10px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #040f54;
+    padding: 1px;
+    height: 50px;
+}
+
+#title {
+    font-family: "Pentay Slab";
+    font-size: 50px;
+    color: yellow;
+    padding: 1px;
+    letter-spacing: 5px;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    width: 23%;
+    /* Adjust the width as needed */
+    margin-bottom: 20px;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 10px;
+    }
+
+    .column {
+        width: 48%;
+        /* Adjust the width as needed */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    .column {
+        width: 100%;
+    }
+}
+
+@font-face {
+    font-family: "Unbounded";
+    font-weight: 900;
+    font-style: normal;
+}
