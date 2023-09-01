@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unbounded|Handjet|Cutive|VT323">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 
     <title>Coding for Web - Soumil Kumar</title>
     <script>
@@ -71,19 +73,21 @@
             });
 
 
-        // Function to animate text appearing letter by letter
+        // Use the Typed.js library to animate text
         function animateText(element, text) {
-            let index = 0;
-            function addNextLetter() {
-                if (index < text.length) {
-                    element.innerHTML += text.charAt(index);
-                    index++;
-                    setTimeout(addNextLetter, 100); // Adjust the timing as needed
-                }
-            }
-            addNextLetter();
+            new Typed(element, {
+                strings: [text],
+                typeSpeed: 120, // Adjust the typing speed as needed
+            });
         }
+
     </script>
+    <div class="typed-animation" id="typed-animation"></div>
+    <script>
+        // Call the animateText function with Typed.js
+        animateText(document.getElementById("typed-animation"), "CODING 4 WEB - Soumil Kumar");
+    </script>
+
 </head>
 
 
@@ -110,7 +114,9 @@
                                 Recreation |</a></div>
                         <div class="tooltip-option"><a href="docs/a2/dom_structure.png">DOM Structure |</a>
                         </div>
-                        <div class="tooltip-option"><a href="docs/a2_js/index2.html">A2 Using JS CSV</a>
+                        <div class="tooltip-option"><a
+                                href="https://pulkishore.github.io/Coding_4_Web/Poster%20A2%20Js/index.html">A2 Using JS
+                                CSV</a>
                         </div>
                     </div>
                 </div>
@@ -137,6 +143,11 @@
             <a href="https://pulkishore.github.io/Coding_4_Web/Website%20Documentation/index.html"
                 class="task-button">18th Aug 23</a>
         </div>
+        <div class="tasks-container3">
+            <a href="docs/22_aug/index.html" class="task-button">22nd Aug 23</a>
+            <a href="docs/25_aug/index_copy.html" class="task-button">25th Aug 23</a>
+            <a href="docs/_aug/17_aug_soumil.html" class="task-button">28th Aug 23</a>
+        </div>
     </main>
     <!-- Add the moving text carousel -->
     <div class="carousel-container">
@@ -160,6 +171,8 @@
 
 
     </script>
+
+
 </body>
 
 </html>
